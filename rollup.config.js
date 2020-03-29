@@ -1,3 +1,4 @@
+import cjs from 'rollup-plugin-commonjs'
 import svelte from 'rollup-plugin-svelte'
 import resolve from '@rollup/plugin-node-resolve'
 import pkg from './package.json'
@@ -13,5 +14,5 @@ export default {
     { file: pkg.module, format: 'es' },
     { file: pkg.main, format: 'umd', name },
   ],
-  plugins: [svelte(), resolve()],
+  plugins: [svelte(), resolve(), cjs()],
 }

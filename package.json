@@ -1,6 +1,10 @@
 {
   "name": "svelte-cachedb",
   "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/josefaidt/svelte-cachedb",
+    "type": "git"
+  },
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
@@ -16,6 +20,7 @@
     "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "rollup": "^1.32.0",
+    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-svelte": "^5.1.1",
     "svelte": "^3.19.1"
   },
