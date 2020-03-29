@@ -1,0 +1,28 @@
+{
+  "name": "svelte-cachedb",
+  "version": "0.1.0",
+  "svelte": "src/index.js",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "yarn build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "deepmerge": "^4.2.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "^4.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "rollup": "^1.32.0",
+    "rollup-plugin-svelte": "^5.1.1",
+    "svelte": "^3.19.1"
+  },
+  "keywords": [
+    "svelte",
+    "database",
+    "storage",
+    "cache"
+  ]
+}
