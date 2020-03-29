@@ -21,7 +21,7 @@
   })
   // ALWAYS SET STRUCTURE
   $: if (!$db.dbName || !$db.version) {
-    db.update(s => ({ ...s, ...structure }))
+    db.update(s => merge(s, structure))
   }
 
   onMount(() => {
@@ -32,6 +32,10 @@
         parsed = JSON.parse(raw)
       } catch(e) {
         // womp womp
+        console.warn('Error parsing existing DB, creating backup...')
+        store.setItem(`${key}-backup-${Date.now()}`, raw)
+        console.info('Creating new database...')
+        setStore()
       } finally {
         if (!parsed.version) {
           console.warn('Error parsing DB version')
